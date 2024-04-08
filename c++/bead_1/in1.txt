@@ -1,0 +1,5 @@
+3
+Bean t 99
+Dean p 1
+Teen z 33
+60
