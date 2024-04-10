@@ -1,4 +1,4 @@
-In this project, there are several submissions grouped by programming language and functionality. Here's an overview of the submissions:
+In this project, there are several submissions grouped by programming language and functionality. Here's an overview of the submissions:\
 .NET Projects:
 - Winforms, WPF, and MAUI Nine Men's Morris Games: Three projects developed in .NET, each implementing a version of the Nine Men's Morris game. They are accompanied by Hungarian documentation.
 C Projects:
