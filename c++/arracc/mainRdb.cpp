@@ -15,7 +15,6 @@
 #include "arracc.h"
 #include <string>
 #include <functional>
-#include "arracc.h"
 
 struct custom_op
 {
@@ -47,12 +46,12 @@ bool check()
 
   if ( !b )
   {
-    array_accumulater<int> aci( s, sizeof( s ) / sizeof( s[ 0 ] ) );
-    std::cout << "Accumlated S: ";
+    array_accumulator<int> aci( s, sizeof( s ) / sizeof( s[ 0 ] ) );
+    std::cout << "Accumulated sum of S: ";
     printArr(s, sizeof( s ) / sizeof( s[ 0 ] ));
-    array_accumulater<std::string> acs( ws,
+    array_accumulator<std::string> acs( ws,
                                         sizeof( ws ) / sizeof( ws[ 0 ] ) );
-    std::cout << "Accumlated WS: ";
+    std::cout << "Accumulated WS: ";
     printArr(ws, sizeof( ws ) / sizeof( ws[ 0 ] ));
     b = s[ 3 ] == 21 && s[ 4 ] == 23 && ws[ 2 ].size() == 1U * s[ 1 ];
   }
@@ -66,17 +65,22 @@ bool check()
   b = false;
   int t[] = { 8, 2 };
   int a[] = { 1, 1, 2, 1 };
+  std::cout << "T: ";
+  printArr(t, sizeof( t ) / sizeof( t[ 0 ] ));
+  std::cout << "A: ";
+  printArr(a, sizeof( a ) / sizeof( a[ 0 ] ));
+
   if ( !b )
   {
-    array_accumulater<int> aci( s, sizeof( s ) / sizeof( s[ 0 ] ) );
+    array_accumulator<int> aci( s, sizeof( s ) / sizeof( s[ 0 ] ) );
     aci.add( t, sizeof( t ) / sizeof( t[ 0 ] ) );
     aci.add( a, sizeof( a ) / sizeof( a[ 0 ] ) );
-    std::cout << "Accumlated S + T: ";
+    std::cout << "Accumulated S + T: ";
     printArr(t, sizeof( t ) / sizeof( t[ 0 ] ));
-    std::cout << "Accumlated S + T + A: ";
+    std::cout << "Accumulated S + T + A: ";
     printArr(a, sizeof( a ) / sizeof( a[ 0 ] ));
 
-    const array_accumulater<std::string> acs( ws,
+    const array_accumulator<std::string> acs( ws,
                                               sizeof( ws ) / sizeof( ws[ 0 ] ) );
 
     b = ws[ 3 ].size() == aci.size() && 9 == s[ 1 ] &&
@@ -91,11 +95,11 @@ bool check()
   double d[] = { 1.5, 2.7 };
   if ( !b )
   {
-    array_accumulater<int, std::multiplies<int> > m( s, sizeof( s ) / sizeof( s[ 0 ] ) );
-    std::cout << "Accumlated S: ";
+    array_accumulator<int, std::multiplies<int> > m( s, sizeof( s ) / sizeof( s[ 0 ] ) );
+    std::cout << "Accumulated product of S: ";
     printArr(s, sizeof( s ) / sizeof( s[ 0 ] ));
     m.add( a, sizeof( a ) / sizeof( a[ 0 ] ) );
-    array_accumulater<double, custom_op> acd( d, sizeof( d ) / sizeof( d[ 0 ] ) );
+    array_accumulator<double, custom_op> acd( d, sizeof( d ) / sizeof( d[ 0 ] ) );
 
     b = 576 == s[ 3 ] && 2 == a[ 0 ] / s[ 3 ] && d[ 1 ] > 5.5;
   }
@@ -105,8 +109,5 @@ bool check()
 
 int main()
 {
-  std::cout << "Your solution is "
-            << (check() ? "" : "not ")
-            << "ready for submission."
-            << std::endl;
+  std::cout << (check() ? "correct" : "not correct") << std::endl;
 }

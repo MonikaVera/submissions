@@ -3,13 +3,13 @@
 #include <vector>
 
 template <typename T, class BinPred=std::plus<T>>
-class array_accumulater {
+class array_accumulator {
 private:
   std::vector<T> arrOld;
   std::vector<T*> arrays;
   std::vector<int> sizes;
 public:
-  array_accumulater(T* arr, int size) {
+  array_accumulator(T* arr, int size) {
       arrOld.push_back(arr[0]);
       for(int i=1; i<size; i++) {
         arrOld.push_back(arr[i]);
@@ -18,7 +18,7 @@ public:
       arrays.push_back(arr);
       sizes.push_back(size);
     }
-  ~array_accumulater() {
+  ~array_accumulator() {
     while(!arrOld.empty()) {
       T* curr=arrays.back();
       for(int j=sizes.back()-1; j>=0; j--) {

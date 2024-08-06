@@ -61,7 +61,9 @@ This program involves creating an array_accumulator class template in C++. This 
 ## Class Specification
 ### Template Parameters
 - T: Type of elements stored in the arrays.
+- BinPred: Binary operation to apply to accumulate the values (default is std::plus<T>).
 ### Public Methods
 - Constructor: Accepts a reference to an array and transforms it as described.
 - Destructor: Restores the array to its original state.
-add: Accepts additional arrays, continuing the accumulation from the end of the last transformed array.
+- add: Accepts additional arrays, continuing the accumulation from the end of the last transformed array.
+- size: Returns the total number of original elements stored.
