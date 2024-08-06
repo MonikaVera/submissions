@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "beadando.h"
+#include "reverse.h"
 
 int reverseThem(int argc, char **argv)
 { 

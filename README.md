@@ -1,6 +1,6 @@
 In this project, there are several submissions grouped by programming language and functionality. Here's an overview of the submissions:
 ## C Projects:
-- In beadando0 there is a program that expects a text file (.txt) and reverses the order of the words in the file.
+- In reverse there is a program that expects a text file (.txt) and reverses the order of the words in the file.
 - In beadando1 there is a program for managing workers and their workdays.
 - In beadando2 there is a program for managing workers and organizing transportation for them, including bus scheduling.
 ## C++ Projects:
@@ -67,3 +67,41 @@ This program involves creating an array_accumulator class template in C++. This 
 - Destructor: Restores the array to its original state.
 - add: Accepts additional arrays, continuing the accumulation from the end of the last transformed array.
 - size: Returns the total number of original elements stored.
+
+# Reverse Command Implementation
+This program involves implementing the reverse command in C. The reverse command processes the contents of files provided as arguments, or reads lines from the console if no files are specified. It then outputs the lines in reverse order, with each line reversed, and numbered from the end to the beginning.
+## Features
+- Reads lines from one or more files or from standard input.
+- Reverses the order of the lines.
+- Reverses the content of each line.
+- Numbers the lines starting from the end.
+- Press Ctrl+D (on Unix) or Ctrl+Z (on Windows) to indicate the end of input.
+
+## Example
+Given a file test.txt with the following content:
+
+```txt
+apple
+banana
+cherry
+```
+Running ./a.out test.txt will produce:
+```txt
+3 yrrehc
+2 ananab
+1 elppa
+```
+If test.txt is specified twice, the output will be:
+```txt
+3 yrrehc
+2 ananab
+1 elppa
+3 yrrehc
+2 ananab
+1 elppa
+```
+## File Structure
+The project consists of the following files:
+- main.c: Contains the main function and the reverseThem function.
+- reverse.c: Contains the implementations of helper functions.
+- reverse.h: Contains the declarations of helper functions.
