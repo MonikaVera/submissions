@@ -47,14 +47,14 @@ The program reads the initial data from a text file. The format of the file is:
 - The last line contains the initial humidity level.
 
 Example Input File:
-    ```bash
-    4
-    Bean t 86
-    Green z 26
-    Dean p 12
-    Teen z 35
-    98
-    ```
+   ```txt
+   4
+   Bean t 86
+   Green z 26
+   Dean p 12
+   Teen z 35
+   98
+   ```
 
 # Array Accumlator
 This program involves creating an array_accumulator class template in C++. This class will transform a given array so that each element at index i contains the cumulative sum (or other specified binary operation result) of all elements from the start up to index i. Additionally, when the array_accumulator object is destroyed, the original array will be restored to its initial state. The class will also support adding additional arrays, where the accumulation will continue from where the previous array left off.
