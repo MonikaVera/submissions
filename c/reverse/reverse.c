@@ -28,7 +28,6 @@ int reverseThem(int argc, char **argv)
                 char ** words=beolvas(ptr, fp);
                 fclose(fp);
                 calling(words, ptr);
-                *ptr=0;
             } 
         }  
         if(canopenAll==1)
@@ -101,11 +100,11 @@ void reverse(char ** words, int currentLine)
 
 void print(char ** fruit, int k)
 {
+    //printf("here: %d\n", k);
     int kiSzam=k;
     for(int i=0; i< k; i++)
     {
-        printf("%d ", kiSzam);
-        printf("%s\n", fruit[i]);
+        printf("%d %s\n", kiSzam, fruit[i]);
         free(fruit[i]);
         kiSzam--;
     }

@@ -1,11 +1,10 @@
-In this project, there are several submissions grouped by programming language and functionality. Here's an overview of the submissions:
-## C Projects:
-- In reverse there is a program that expects a text file (.txt) and reverses the order of the words in the file.
-- In beadando1 there is a program for managing workers and their workdays.
-- In beadando2 there is a program for managing workers and organizing transportation for them, including bus scheduling.
+In this project, there are 4 submissions grouped by programming language. Here's an overview of the submissions:
 ## C++ Projects:
-- In weather_sim there is a weather simulation program.
-- In arracc there is a implementation of the array_accumulator class.
+- In weather_sim folder there is a weather simulation program.
+- In arracc folder there is a implementation of the array_accumulator class.
+## C Projects:
+- In reverse folder there is a program that expects a text file (.txt) and reverses the order of the words in the file.
+- In vineyard folder there is a program for managing workers and organizing transportation for them, including bus scheduling.
 
 # Weather Simulator
 ## Project Description
@@ -68,7 +67,7 @@ This program involves creating an array_accumulator class template in C++. This 
 - add: Accepts additional arrays, continuing the accumulation from the end of the last transformed array.
 - size: Returns the total number of original elements stored.
 
-# Reverse Command Implementation
+# Reverse Command
 This program involves implementing the reverse command in C. The reverse command processes the contents of files provided as arguments, or reads lines from the console if no files are specified. It then outputs the lines in reverse order, with each line reversed, and numbered from the end to the beginning.
 ## Features
 - Reads lines from one or more files or from standard input.
@@ -105,3 +104,22 @@ The project consists of the following files:
 - main.c: Contains the main function and the reverseThem function.
 - reverse.c: Contains the implementations of helper functions.
 - reverse.h: Contains the declarations of helper functions.
+
+# Vineyard workers
+"Igyál komám" szőlészet is a C/C++ command-line application designed for managing workers at a vineyard. The primary function of this application is to handle the scheduling and transportation of vineyard workers who apply to work on different days of the week during the spring season. The application facilitates adding new workers, listing their details, modifying records, deleting them, and organizing transportation using minibuses.
+
+## Features
+### Worker Management
+- Add New Worker: Allows users to enter a new worker's name and the days they are available to work. The details are stored in a file.
+- List Workers: Displays all workers and their available days from the file, providing a comprehensive overview of the current list of applicants.
+- Modify Records: Enables users to update an existing worker's information, such as changing the days they are available to work.
+- Delete Records: Removes a worker's information from the list, effectively deleting their record from the file.
+### Transportation Management
+- Start Buses: Organizes the transportation of workers using two minibuses, each with a capacity of 5 workers. The application coordinates bus operations based on the available workers for a specific day.
+- Inter-Process Communication (IPC): Utilizes pipes and message queues to handle communication between the main application and the child processes responsible for managing bus operations. This allows for real-time coordination and status updates.
+### File Operations
+- Data Persistence: Workers' data is saved to and retrieved from a file, ensuring that the list of applicants persists between program runs.
+- File Handling: Implements robust file handling operations, including creating, reading, writing, and appending to files.
+### User Interface
+- Menu-Driven Interface: Provides a simple text-based menu that allows users to navigate through various functionalities such as adding new workers, listing records, and managing transportation.
+- Error Handling: Includes error handling for file operations and IPC mechanisms, ensuring that the application can gracefully handle issues and provide feedback to the user.
