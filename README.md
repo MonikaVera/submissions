@@ -1,4 +1,4 @@
-In this project, there are 4 submissions grouped by programming language. Here's an overview of the project:
+In this project, there are 4 programs grouped by programming language. Here's an overview of the project:
 ## C++:
 - In weather_sim folder there is a weather simulation program.
 - In arracc folder there is a implementation of the array_accumulator class.
