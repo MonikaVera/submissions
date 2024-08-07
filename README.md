@@ -1,8 +1,8 @@
-In this project, there are 4 submissions grouped by programming language. Here's an overview of the submissions:
-## C++ Projects:
+In this project, there are 4 submissions grouped by programming language. Here's an overview of the project:
+## C++:
 - In weather_sim folder there is a weather simulation program.
 - In arracc folder there is a implementation of the array_accumulator class.
-## C Projects:
+## C:
 - In reverse folder there is a program that expects a text file (.txt) and reverses the order of the words in the file.
 - In vineyard folder there is a program for managing workers and organizing transportation for them, including bus scheduling.
 
