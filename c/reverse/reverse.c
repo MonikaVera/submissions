@@ -100,7 +100,6 @@ void reverse(char ** words, int currentLine)
 
 void print(char ** fruit, int k)
 {
-    //printf("here: %d\n", k);
     int kiSzam=k;
     for(int i=0; i< k; i++)
     {
